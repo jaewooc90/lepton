@@ -684,6 +684,9 @@ int main( int argc, char** argv )
     g_argv = (const char **)argv;
     TimingHarness::timing[0][TimingHarness::TS_MAIN]
         = TimingHarness::get_time_us(true);
+
+    fprintf(msgout, "program starts/n");
+
     size_t thread_mem_limit = 
 #ifdef HIGH_MEMORY
         128 * 1024 * 1024
